@@ -3,43 +3,43 @@
 head first 의 design-pattern
 
 ## 목차
-1. [스트래티지 패턴](#strategy-pattern(스트래티지-패턴))
-2. [옵저버 패턴](#observer-pattern(옵저버-패턴))
-3. [데코레이터 패턴](#decorate-pattern(데코레이터-패턴))
-4. [팩토리 메소드 패턴](#factory-method-pattern(팩토리-메소드-패턴))
-5. [추상 팩토리 패턴](#abstract-factory-pattern(추상-팩토리-패턴))
-6. [싱글턴 패턴](#singleton-pattern(싱글턴-패턴))
-7. [어댑터 패턴](#adaptor-pattern(어댑터-패턴))
-8. [퍼사드 패턴](#facade-pattern(퍼사드-패턴))
-9. [템플릿 메소드 패턴](#template-method-pattern(템플릿-메소드-패턴))
+1. [스트래티지 패턴](#strategy-pattern-스트래티지-패턴)
+2. [옵저버 패턴](#observer-pattern-옵저버-패턴)
+3. [데코레이터 패턴](#decorate-pattern-데코레이터-패턴)
+4. [팩토리 메소드 패턴](#factory-method-pattern-팩토리-메소드-패턴)
+5. [추상 팩토리 패턴](#abstract-factory-pattern-추상-팩토리-패턴)
+6. [싱글턴 패턴](#singleton-pattern-싱글턴-패턴)
+7. [어댑터 패턴](#adaptor-pattern-어댑터-패턴)
+8. [퍼사드 패턴](#facade-pattern-퍼사드-패턴)
+9. [템플릿 메소드 패턴](#template-method-pattern-템플릿-메소드-패턴)
 
 ## 패턴
-### strategy pattern(스트래티지 패턴)
+### strategy pattern 스트래티지 패턴
 스트래티지 패턴 에서는 알고리즘군을 정의하고 각각을 캡슐화하여 교환해서 사용할 수 있도록 만든다. 스트래티지를 활용하면 알고리즘을 사용하는 클라이언트와는 독립적으로 알고리즘을 변경할 수 있다.
 
-### observer pattern(옵저버 패턴)
+### observer pattern 옵저버 패턴
 한 객체의 상태가 바뀌면 그 객체에 의존하는 다른 객체들한테 연락이 가고 자동으로 내용이 갱신되는 방식으로 일대다(one-to-many) 의존성을 정의합니다.
 
-### decorate-pattern(데코레이터 패턴)
+### decorate-pattern 데코레이터 패턴
 데코레이터 패턴에서는 객체에 추가적인 요건을 동적으로 첨가한다. 데코레이터는 서브클래스를 만드는 것을 통해서 기능을 유연하게 확장할 수 있는 방법을 제공한다.
 
-### factory method pattern(팩토리 메소드 패턴)
+### factory method pattern 팩토리 메소드 패턴
 팩토리 메소드 패턴에서는 객체를 생성하기 위한 인터페이스를 정의하는데, 어떤 클래스의 인스턴스를 만들지는 서브클래스에서 결정하게 만듭니다. 팩토리 메소드 패턴을 이용하면 클래스의 인스턴스를 만드는 일을 서브클래스에게 맡기는 것이죠.
 
-### abstract-factory-pattern(추상 팩토리 패턴)
+### abstract-factory-pattern 추상 팩토리 패턴
 추상 팩토리 패턴에서는 인터페이스를 이용하여 서로 연관된, 또는 의존하는 객체를 구상 클래스를 지정하지 않고도 생성할 수 있습니다.
 
-### singleton pattern(싱글턴 패턴)
+### singleton pattern 싱글턴 패턴
 싱글턴 패턴은 해당 클래스의 인스턴스가 하나만 만들어지고, 어디서든지 그 인스턴스에 접근할 수 있도록 하기 위한 패턴입니다.
 
 
-### adaptor pattern(어댑터 패턴)
+### adaptor pattern 어댑터 패턴
 한 클래스의 인터페이스를 클라이언트에서 사용하고자 하는 다른 인터페이스로 변환합니다. 어댑터를 이용하면 인터페이스 호환성 문제 때문에 같이 쓸 수 없는 클래스들을 연결해서 쓸 수 있습니다.
 
-### facade pattern(퍼사드 패턴)
+### facade pattern 퍼사드 패턴
 어떤 서브시스템의 일련의 인터페이스에 대한 통합된 인터페이스를 제공합니다. 퍼사드에서 고수준 인터페이스를 정의하기 때문에 서브시스템을 더 쉽게 사용할 수 있습니다.
 
-### template method pattern(템플릿 메소드 패턴)
+### template method pattern 템플릿 메소드 패턴
 템플릿 메소드 패턴에서는 메소드에서 알고리즘의 골격을 정의합니다. 알고리즘의 여러 단계 중 일부는 서브클래스에서 구현할 수 있습니다. 템플릿 메소드를 이용하면 알고리즘의 구조는 그대로 유지하면서 서브클래스에서 특정 단계를 재정의할 수 있습니다.
 
 
