@@ -13,6 +13,7 @@ head first 의 design-pattern
 8. [퍼사드 패턴](#facade-pattern-퍼사드-패턴)
 9. [템플릿 메소드 패턴](#template-method-pattern-템플릿-메소드-패턴)
 10. [이터레이터 패턴](#iterator-pattern-이터레이터-패턴)
+11. [컴포지트 패턴](#composite-pattern-컴포지트-패턴)
 
 ## 패턴
 ### strategy pattern 스트래티지 패턴
@@ -51,4 +52,11 @@ head first 의 design-pattern
 의존성 부패방지(고수준)
 
 ### iterator pattern 이터레이터 패턴
+이터레이터 패턴은 컬렉션 구현 방법을 노출시키지 않으면서도 그 집합체 안에 들어있는 모든 항목에 접근할 수 있게  해 주는 방법을 제공해 줍니다.
 
+##### 디자인 원칙(단일 역할 원칙)
+-클래스를 바꾸는 이유는 한 가지 뿐이어야 한다.
+
+
+### composite pattern 컴포지트 패턴
+컴포지트 패턴을 이용하면 객체들을 트리구조로 구성하여 부분과 전체를 나타내는 계층구조로 만들 수 있습니다. 이 패턴을 이용하면 클라이언트에서 개별 객체와 다른 객체들로 구성된 복합 객체(composite)를 똑같은 방법으로 다룰 수 있습니다. 
