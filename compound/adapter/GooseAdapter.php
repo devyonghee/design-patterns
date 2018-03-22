@@ -5,7 +5,7 @@ class GooseAdapter implements Quackable
 {
     private $goose;
 
-    public function GooseAdapter($goose)
+    public function __construct($goose)
     {
         /** @var Goose $goose */
         $this->goose = $goose;
