@@ -7,7 +7,6 @@ class WinnerState implements State
 
     public function WinnerState($gumballMachine)
     {
-        writeln('dd');
         $this->gumballMachine = $gumballMachine;
     }
 
