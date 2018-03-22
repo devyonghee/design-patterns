@@ -14,6 +14,7 @@ head first 의 design-pattern
 9. [템플릿 메소드 패턴](#template-method-pattern-템플릿-메소드-패턴)
 10. [이터레이터 패턴](#iterator-pattern-이터레이터-패턴)
 11. [컴포지트 패턴](#composite-pattern-컴포지트-패턴)
+12. [상태 패턴](#state-pattern-상태-패턴)
 
 ## 패턴
 ### strategy pattern 스트래티지 패턴
@@ -60,3 +61,6 @@ head first 의 design-pattern
 
 ### composite pattern 컴포지트 패턴
 컴포지트 패턴을 이용하면 객체들을 트리구조로 구성하여 부분과 전체를 나타내는 계층구조로 만들 수 있습니다. 이 패턴을 이용하면 클라이언트에서 개별 객체와 다른 객체들로 구성된 복합 객체(composite)를 똑같은 방법으로 다룰 수 있습니다. 
+
+### state pattern 상태 패턴
+스테이트 패턴을 이용하면 객체의 내부 상태가 바뀜에 따라서 객체의 행동을 바꿀 수 있습니다. 마치 객체의 클래스가 바뀌는 것과 같은 결과를 얻을 수 있습니다.
