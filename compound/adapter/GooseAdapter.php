@@ -1,5 +1,5 @@
 <?php
-require_once "../Quackable.php";
+require_once "./Quackable.php";
 
 class GooseAdapter implements Quackable
 {
