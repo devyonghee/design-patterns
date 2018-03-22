@@ -6,7 +6,7 @@ require_once 'FlyWithWings.php';
 
 class MallardDuck extends duck
 {
-    function mallardDuck()
+    function MallardDuck()
     {
         $this->quackBehavior = new QuackSoundOut();
         $this->flyBehavior = new FlyWithWings();

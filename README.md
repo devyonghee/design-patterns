@@ -15,6 +15,7 @@ head first 의 design-pattern
 10. [이터레이터 패턴](#iterator-pattern-이터레이터-패턴)
 11. [컴포지트 패턴](#composite-pattern-컴포지트-패턴)
 12. [상태 패턴](#state-pattern-상태-패턴)
+13. [프록시 패턴](#proxy-pattern-프록시-패턴)
 
 ## 패턴
 ### strategy pattern 스트래티지 패턴
@@ -64,3 +65,6 @@ head first 의 design-pattern
 
 ### state pattern 상태 패턴
 스테이트 패턴을 이용하면 객체의 내부 상태가 바뀜에 따라서 객체의 행동을 바꿀 수 있습니다. 마치 객체의 클래스가 바뀌는 것과 같은 결과를 얻을 수 있습니다.
+
+### proxy pattern 프록시 패턴
+어떤 객체에 대한 접근을 제어하기 위한 용도로 대리인이나 대변인에 해당하는 객체를 제공하는 패턴

@@ -4,7 +4,7 @@ require_once 'Duck.php';
 
 echo '스트래티지 패턴<br><br>';
 
-$mallardDuck = new mallardDuck();
+$mallardDuck = new MallardDuck();
 $mallardDuck->quackPerform();
 $mallardDuck->flyPerform();
 $mallardDuck->landPerform();
