@@ -1,4 +1,5 @@
 <?php
+
 require_once 'MallardDuck.php';
 require_once 'RedheadDuck.php';
 require_once 'DuckCall.php';
@@ -9,12 +10,13 @@ require_once 'decorate/QuackCounter.php';
 
 class DuckSimulator
 {
-    public function simulate()
+    public function simulate($duckFactory)
     {
-        $mallardDuck = new QuackCounter(new MallardDuck());
-        $redheadDuck = new QuackCounter(new RedheadDuck());
-        $duckCall = new QuackCounter(new DuckCall());
-        $rubberDuck = new QuackCounter(new RubberDuck());
+        /** @var abstractFactory\CountingDuckFactory $duckFactory */
+        $mallardDuck = $duckFactory->createMallardDuck();
+        $redheadDuck = $duckFactory->createRedheadDuck();
+        $duckCall = $duckFactory->createDuckCall();
+        $rubberDuck = $duckFactory->createRubberDuck();
         $goose = new GooseAdapter(new Goose());
 
         echo "<br>Duck Simulator<br>";

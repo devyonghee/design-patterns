@@ -1,5 +1,7 @@
 <?php
+require_once 'DuckSimulator.php';
+require_once 'abstract-factory/CountingDuckFactory.php';
 
-require_once "DuckSimulator.php";
+$duckFactory = new CountingDuckFactory();
 
-(new DuckSimulator())->simulate();
+(new DuckSimulator())->simulate($duckFactory);
