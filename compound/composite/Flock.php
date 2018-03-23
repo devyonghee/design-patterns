@@ -4,6 +4,13 @@ require_once './Quackable.php';
 class Flock implements Quackable
 {
     private $quackers = [];
+    private $observable;
+
+
+    public function __construct()
+    {
+        $this->observable = new Observable($this);
+    }
 
     public function add($quacker)
     {
@@ -15,6 +22,17 @@ class Flock implements Quackable
     {
         foreach ($this->quackers as $quacker) {
             $quacker->quack();
+            $this->notifyObservers();
         }
+    }
+
+    public function registerObserver($observer)
+    {
+        $this->observable->registerObserver($observer);
+    }
+
+    public function notifyObservers()
+    {
+        $this->observable->notifyObservers();
     }
 }

@@ -8,6 +8,7 @@ require_once 'Goose.php';
 require_once 'adapter/GooseAdapter.php';
 require_once 'decorate/QuackCounter.php';
 require_once 'composite/Flock.php';
+require_once 'observer/Quackologist.php';
 
 class DuckSimulator
 {
@@ -41,11 +42,11 @@ class DuckSimulator
 
         $flockOfDucks->add($flockOfMallards);
 
-        echo "<br>Duck Simulator: Whole Flock Simulation<br>";
-        $this->simulator($flockOfDucks);
+        echo "<br>Duck Simulator: With Observer<br>";
+        $quackologist = new Quackologist();
+        $flockOfDucks->registerObserver($quackologist);
 
-        echo "<br>Duck Simulator: Mallard Flock Simulation<br>";
-        $this->simulator($flockOfMallards);
+        $this->simulator($flockOfDucks);
 
         echo "The ducks quacked ".QuackCounter::getNumberOfQuacks()." times<br>";
     }
