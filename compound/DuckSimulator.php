@@ -7,24 +7,46 @@ require_once 'RubberDuck.php';
 require_once 'Goose.php';
 require_once 'adapter/GooseAdapter.php';
 require_once 'decorate/QuackCounter.php';
+require_once 'composite/Flock.php';
 
 class DuckSimulator
 {
     public function simulate($duckFactory)
     {
-        /** @var abstractFactory\CountingDuckFactory $duckFactory */
-        $mallardDuck = $duckFactory->createMallardDuck();
+        /** @var CountingDuckFactory $duckFactory */
         $redheadDuck = $duckFactory->createRedheadDuck();
         $duckCall = $duckFactory->createDuckCall();
         $rubberDuck = $duckFactory->createRubberDuck();
         $goose = new GooseAdapter(new Goose());
+        echo "<br>Duck Simulator: With Composite - Flocks<br>";
 
-        echo "<br>Duck Simulator<br>";
-        $this->simulator($mallardDuck);
-        $this->simulator($redheadDuck);
-        $this->simulator($duckCall);
-        $this->simulator($rubberDuck);
-        $this->simulator($goose);
+        $flockOfDucks = new Flock();
+
+        $flockOfDucks->add($redheadDuck);
+        $flockOfDucks->add($duckCall);
+        $flockOfDucks->add($rubberDuck);
+        $flockOfDucks->add($goose);
+
+        $flockOfMallards = new Flock();
+
+        $mallardOne = $duckFactory->createMallardDuck();
+        $mallardTwo = $duckFactory->createMallardDuck();
+        $mallardThree = $duckFactory->createMallardDuck();
+        $mallardFour = $duckFactory->createMallardDuck();
+
+        $flockOfMallards->add($mallardOne);
+        $flockOfMallards->add($mallardTwo);
+        $flockOfMallards->add($mallardThree);
+        $flockOfMallards->add($mallardFour);
+
+        $flockOfDucks->add($flockOfMallards);
+
+        echo "<br>Duck Simulator: Whole Flock Simulation<br>";
+        $this->simulator($flockOfDucks);
+
+        echo "<br>Duck Simulator: Mallard Flock Simulation<br>";
+        $this->simulator($flockOfMallards);
+
         echo "The ducks quacked ".QuackCounter::getNumberOfQuacks()." times<br>";
     }
 
